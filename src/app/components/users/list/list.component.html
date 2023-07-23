@@ -1,0 +1,21 @@
+<div class="container">
+  <div style="min-height: 80px" class="pt-2">
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+      {{ errorMessage }}
+    </div>
+    <div *ngIf="deletedUserId" class="alert alert-primary" role="alert">
+      User with the Id {{ deletedUserId }} is removed from the system.
+    </div>
+  </div>
+  <p *ngIf="usersList.length > 0; else nousers">
+    Showing {{ usersList.length }}
+    {{ usersList.length == 1 ? "Record" : "Records" }}
+  </p>
+
+  <ng-template #nousers> No users found. </ng-template>
+  <div class="row">
+    <div class="col-12 col-md-3 my-1" *ngFor="let user of usersList">
+      <app-user [user]="user" (onRemove)="removeUser($event)"></app-user>
+    </div>
+  </div>
+</div>

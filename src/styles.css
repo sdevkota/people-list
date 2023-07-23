@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #eef2f7;
+}
+.card-shadow {
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: -1px -1px 16px 0 #e9e9e9 !important;
+}
+.card-shadow:hover {
+  box-shadow: 3px 0 10px 0 #acacac !important;
+}

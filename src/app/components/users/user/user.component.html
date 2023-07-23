@@ -1,0 +1,15 @@
+<div class="card card-shadow">
+  <div class="card-body">
+    <h5 class="card-title">{{ user?.name }}</h5>
+    <address>
+      {{ user?.address?.street }}<br />
+      {{ user?.address?.suite }}<br />
+      {{ user?.address?.city }}<br />
+      {{ user?.address?.zipcode }}
+    </address>
+    <a class="btn btn-danger" (click)="deleteUser(user?.id)">
+      <fa-icon [icon]="faTrashCan" size="xs"></fa-icon>
+      Delete</a
+    >
+  </div>
+</div>
